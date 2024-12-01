@@ -1,0 +1,124 @@
+/* Ogólny styl dla ca³ej aplikacji */
+.App {
+    font-family: 'Roboto', sans-serif; /* Zmieniamy czcionkê na bardziej nowoczesn¹ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Kolorowy gradient t³a */
+}
+
+    /* Styl dla g³ównego kontenera (formularz) */
+    .App div {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 15px; /* Zaokr¹glone rogi formularza */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* G³êbszy cieñ */
+        text-align: center;
+        width: 100%;
+        max-width: 600px; /* Zwiêkszamy maksymaln¹ szerokoœæ formularza */
+        transition: transform 0.3s ease-in-out; /* Animacja przy najechaniu */
+    }
+
+        .App div:hover {
+            transform: scale(1.05); /* Powiêksza formularz przy najechaniu */
+        }
+
+/* Nag³ówek aplikacji */
+h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Lekki cieñ pod nag³ówkiem */
+}
+
+/* Stylowanie formularza */
+label {
+    display: block;
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+    input:focus {
+        border-color: #ff7e5f; /* Zmiana koloru obramowania na czerwono-pomarañczowy */
+        outline: none;
+    }
+
+/* Przycisk */
+button {
+    background-color: #ff7e5f; /* Nasycony kolor przycisku */
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+    button:hover {
+        background-color: #feb47b; /* Jaœniejszy kolor na hover */
+        transform: scale(1.05); /* Lekka animacja powiêkszenia przy najechaniu */
+    }
+
+/* Wyniki */
+h2, h3 {
+    margin-top: 20px;
+    color: #333;
+    font-size: 20px;
+}
+
+h2 {
+    color: #000000;
+    font-weight: bold;
+}
+
+h3 {
+    color: #000000; /* Kolor zielony dla wyników */
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Dodanie stylu do marginu dla dolnej czêœci formularza */
+.App div:last-child {
+    margin-bottom: 50px;
+}
+
+/* Responsywnoœæ - na mniejszych ekranach */
+@media (max-width: 600px) {
+    .App {
+        padding: 20px;
+    }
+
+        .App div {
+            padding: 20px;
+            width: 100%;
+            max-width: none;
+        }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input, button {
+        font-size: 16px;
+    }
+}
+
